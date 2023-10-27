@@ -4,9 +4,10 @@ import { useDispatch } from 'react-redux';
 import { signInSuccess } from '../redux/user/userSlice';
 import { useNavigate } from 'react-router-dom';
 
-export default function OAuth() {
+const OAuth = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const handleGoogleClick = async () => {
     try {
       const provider = new GoogleAuthProvider();
@@ -29,16 +30,19 @@ export default function OAuth() {
       dispatch(signInSuccess(data));
       navigate('/');
     } catch (error) {
-      console.log('could not sign in with google', error);
+      console.log('Could not sign in with Google', error);
     }
   };
+
   return (
     <button
       onClick={handleGoogleClick}
-      type='button'
-      className='bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95'
+      type="button"
+      className="bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95"
     >
-      Continue with google
+      Continue with Google
     </button>
   );
-}
+};
+
+export default OAuth;
