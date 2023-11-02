@@ -206,7 +206,7 @@ export default function Profile() {
         cursor-pointer'>
           Delete Account</span>
         </Link>
-        <Link to={'/sign-in'}>
+        <Link to={'/sign-up'}>
         <span onClick={handleSignOut} className='text-red-700 cursor-pointer'>
           Sign out
         </span>  
