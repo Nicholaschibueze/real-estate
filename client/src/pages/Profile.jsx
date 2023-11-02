@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRef } from 'react';
 import { useSelector } from 'react-redux';
+// eslint-disable-next-line no-unused-vars
 import  {getDownloadURL, getStorage, ref, uploadBytes, uploadBytesResumable} from 'firebase/storage';
 import { app } from '../firebase';
 
@@ -37,6 +38,7 @@ export default function Profile() {
       setFilePerc(Math.round(progress));
     },
 
+    // eslint-disable-next-line no-unused-vars
     (error) =>{
       setFileUploadError(true);
     },
