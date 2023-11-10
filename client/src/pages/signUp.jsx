@@ -30,6 +30,7 @@ export default function SignUp() {
         setLoading(false);
         setError(data.message);
         return;
+        
       }
       setLoading(false);
       setError(null);
